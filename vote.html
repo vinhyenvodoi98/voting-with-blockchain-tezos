@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="vote.css"></script>
+        
+        <script src="./eztz.min.js"></script>
+        <script src="app.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <title>React App</title>
+      </head>
+      <body>
+        <div class="container">
+            <div class="vote_with_blockchain">
+                <h2>Vote with blockchain</h2>
+            </div>
+            <div class="account">
+                <strong>Your Account: </strong><span id="account"></span> <strong>has Balance:</strong><span id="balance"></span>
+            </div>
+            <div>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Candidate</th>
+                        <th scope="col">Votes</th>
+                        <th scope="col">Vote</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Alice</td>
+                        <td id="candidate-1"></td>
+                        <td>
+                            <button onclick="vote(0)" type="button" class="btn btn-success">VOTE</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Bob</td>
+                        <td id="candidate-2"></td>
+                        <td>
+                            <button onclick="vote(1)" type="button" class="btn btn-success">VOTE</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Mary</td>
+                        <td id="candidate-3"></td>
+                        <td>
+                            <button onclick="vote(2)" type="button" class="btn btn-success">VOTE</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+        <script>
+            $(()=>{
+                loadData();
+            })
+        </script>
+    </body>
+</html>
